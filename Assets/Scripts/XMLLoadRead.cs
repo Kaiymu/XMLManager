@@ -32,7 +32,7 @@ public abstract class XMLLoadRead : MonoBehaviour {
 			XMLLoad = XMLManager.LoadPC(Application.dataPath + path + fileName);
 			// Si le fichier est bien chargée, met un message 
 			if(XMLLoad != null) {
-				Debug.LogWarning("Sucessfully retrieved : " + XMLLoad + " from :" + path + "folder");
+				Debug.Log("Sucessfully retrieved : " + XMLLoad + " from :" + path + "folder");
 				return XMLLoad;
 			}
 			else {
@@ -48,7 +48,7 @@ public abstract class XMLLoadRead : MonoBehaviour {
 	protected virtual void SaveXML(XMLManager XMLToSave) {	
 		if(XMLToSave != null) {
 			XMLToSave.Save(Application.dataPath + path + fileName);
-			Debug.LogWarning("Saved XML at : "+ path +" with name " +fileName);
+			Debug.Log("Saved XML at : "+ path +" with name " +fileName);
 		}
 	}
 
